@@ -1,1 +1,1 @@
-# assignment_week10
+# Kim Seohyun
