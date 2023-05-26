@@ -30,7 +30,6 @@ const links = [
 ]
 
 const moreLinks = [
-  { text: "Instagram", url: "https://www.instagram.com/hyunnieeee" },
   {
     text: "Facebook",
     url: "https://www.facebook.com/profile.php?id=100006870788775",
@@ -46,7 +45,6 @@ const moreLinks = [
 ]
 
 const aboutme = [{ text: "About me", url: "aboutmepage" }]
-const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`
 
 const IndexPage = () => (
   <Layout>
@@ -64,7 +62,7 @@ const IndexPage = () => (
         Welcome to <b>Seohyun</b>'s Homepage!
       </h1>
 
-      <Link to={`${aboutme[0].url}${utmParameters}`}>
+      <Link to={`${aboutme[0].url}`}>
         <b>
           <b>[About me]</b>
         </b>
@@ -73,10 +71,7 @@ const IndexPage = () => (
     <ul className={styles.list}>
       {links.map(link => (
         <li key={link.url} className={styles.listItem}>
-          <a
-            className={styles.listItemLink}
-            href={`${link.url}${utmParameters}`}
-          >
+          <a className={styles.listItemLink} href={`${link.url}`}>
             {link.text} ↗
           </a>
           <p className={styles.listItemDescription}>{link.description}</p>
@@ -89,7 +84,7 @@ const IndexPage = () => (
     </p>
     {moreLinks.map((link, i) => (
       <React.Fragment key={link.url}>
-        <a href={`${link.url}${utmParameters}`}>{link.text}</a>
+        <a href={`${link.url}`}>{link.text}</a>
         {i !== moreLinks.length - 1 && <> · </>}
       </React.Fragment>
     ))}
