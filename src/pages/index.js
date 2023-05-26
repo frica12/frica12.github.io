@@ -30,7 +30,7 @@ const links = [
 ]
 
 const moreLinks = [
-  { text: "Instagram", url: "https://www.instagram.com/hyunnieeee/" },
+  { text: "Instagram", url: "https://www.instagram.com/hyunnieeee" },
   {
     text: "Facebook",
     url: "https://www.facebook.com/profile.php?id=100006870788775",
