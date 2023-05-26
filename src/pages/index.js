@@ -14,7 +14,7 @@ const links = [
   },
   {
     text: "Education",
-    url: "page2",
+    url: "page5",
     description: "This is my Educational Background.",
   },
   {
@@ -96,6 +96,6 @@ const IndexPage = () => (
   </Layout>
 )
 
-export const Head = () => <Seo title="Home" />
+export const Head = () => <Seo title="Seohyun's Homepage" />
 
 export default IndexPage

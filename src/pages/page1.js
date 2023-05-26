@@ -15,19 +15,20 @@ const Page1 = () => (
     <p>C++ Programming</p>
     <p>Python Programming</p>
     <p>Javascript Programming</p>
-
+    <br></br>
     <p>
       <b>Tools</b>
     </p>
     <p>GIT</p>
     <p>VSCode</p>
     <p>Eclipse IDE</p>
+    <br></br>
     <p>
       <b>Certifications</b>
     </p>
     <p>OPIC IH</p>
     <p>MS Azure AI-900</p>
-
+    <br></br>
     <Link to="/">Go back to the Homepage</Link>
   </Layout>
 )
