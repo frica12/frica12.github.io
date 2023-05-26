@@ -1,29 +1,29 @@
-name: Build and Deploy
-on:
-  push:
-    branches:
-      - main
+name: Build and Deploy # This is the name of my GitHub Actions workflow.
+on: # This indicates that when the workflow will be run.
+  push: # Workflow runs when 'push' occurs.
+    branches: # If 'push' occurs in the branches in here, then the workflow executed,
+      - main # If 'push' occurs in 'main' branch, the workflow executed.
 
-jobs:
-  build-and-deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
+jobs: # This is the jobs that workflow will do.
+  build-and-deploy: # This is the name of jobs.
+    runs-on: ubuntu-latest # his defines the OS where the job will be done.
+    steps: # This is the steps of the job.
+      - name: Checkout # This is the name of Step 1.
+        uses: actions/checkout@v2 # This is the 'checkout' action.
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: 18
+      - name: Set up Node.js # This is the name of Step 2.
+        uses: actions/setup-node@v2 # This is the action to setup the Node.js.
+        with: # This indicates which version of Node.js to use.
+          node-version: 18 # It will setup the 18 version of Node.js
 
-      - name: Install Dependencies
-        run: npm install
+      - name: Install Dependencies # This is the name of Step 3.
+        run: npm install # This runs the 'npm install' command.
 
-      - name: Build
-        run: npm run build
+      - name: Build # This is the name of Step 4.
+        run: npm run build # This runs the 'npm run build' command
 
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-          publish_dir: ./public
+      - name: Deploy # This is the name of Step 5.
+        uses: peaceiris/actions-gh-pages@v3 # This is the 'actions-gh-pages' action to deploy the built files to GitHub Pages.
+        with: # This is the additional inputs to action.
+          github_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }} # This is the GitHub token for authentication.
+          publish_dir: ./public # It will be deployed in 'public' directory.
